@@ -19,7 +19,7 @@ function Navbar() {
                 <nav className={'toggle' ? '' : 'navBarColor'}>
                     <div className='nav-options'>
                         <h1 id={toggle ? '' : 'heading'}>SHOW FINDER</h1>
-                        <NavLink to="" style={({ isActive }) => { return { color: isActive ? '#fff' : 'EE9B00' } }}>
+                        <NavLink to="/" style={({ isActive }) => { return { color: isActive ? '#fff' : 'EE9B00' } }}>
                             <span id={toggle ? '' : 'MoviesLight'}>Movies</span>
                         </NavLink>
                         <NavLink to="tvshows" style={({ isActive }) => { return { color: isActive ? '#fff' : 'EE9B00' } }}>
@@ -38,7 +38,8 @@ function Navbar() {
                     </div>
                 </nav >
                 <Routes>
-                    <Route path="" element={<Movies />} />
+                    <Route path="/" element={<Movies />} />
+                    <Route path="/movie-show-search" element={<Movies />} />
                     <Route path="tvshows" element={<TvShows />} />
                     <Route path="pricing" element={<Pricing />} />
                     <Route path="trends" element={<Trends />} />
